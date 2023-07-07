@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="images/png" href="images/icon.png" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <section id="tools">
+        <div class="row">
+          <label>Shapes</label>
+          <ul id="options">
+            <li id="option" class="tool" char="rectangle">
+              <i class="fa-regular fa-square"></i>
+              <label>Rectangle</label>
+            </li>
+            <li id="option" class="tool" char="circle">
+              <i class="fa-regular fa-circle"></i>
+              <label>Circle</label>
+            </li>
+            <li id="option" class="tool" char="triangle">
+              <img src="images/triangle.png" />
+              <label>Triangle</label>
+            </li>
+            <li id="option" class="fill-color">
+              <input type="checkbox" id="fill" />
+              <label>Fill Color</label>
+            </li>
+          </ul>
+        </div>
+        <div class="row">
+          <label>Options</label>
+          <ul id="options">
+            <li id="option" class="tool active" char="brush">
+              <i class="fa-solid fa-paintbrush"></i>
+              <label>Brush</label>
+            </li>
+            <li id="option" class="tool" char="eraser">
+              <i class="fa-solid fa-eraser"></i>
+              <label>Eraser</label>
+            </li>
+            <li id="option">
+              <input type="range" id="size" min="1" max="30" value="5" />
+            </li>
+          </ul>
+        </div>
+        <div class="row color">
+          <label>Colors</label>
+          <ul id="options">
+            <li id="option"></li>
+            <li id="option" class="selected"></li>
+            <li id="option"></li>
+            <li id="option"></li>
+            <li id="option">
+              <input type="color" value="#4a98f7" id="custom-color" />
+            </li>
+          </ul>
+        </div>
+        <div class="row button">
+          <button type="button" id="reset">Clear Canvas</button>
+          <button type="button" id="save">Save As Image</button>
+        </div>
+      </section>
+      <section id="board">
+        <canvas></canvas>
+      </section>
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>
